@@ -5,9 +5,60 @@
   font-family: "Spartan", sans-serif;
 }
 
+.theme-1 {
+  --col-body-bg: hsl(222, 26%, 31%);
+  --col-screen-bg: hsl(224, 36%, 15%);
+  --col-head: #fff;
+  --col-screen: #fff;
+  --col-key-bg: hsl(223, 31%, 20%);
+  --key-col: hsl(221, 14%, 31%);
+  --key-bg: hsl(30, 25%, 89%);
+  --key-shadow: hsl(224, 28%, 35%);
+  --sp-key-col: #fff;
+  --sp-key-bg: hsl(225, 21%, 49%);
+  --sp-key-shadow: hsl(224, 28%, 35%);
+  --eq-key-col: #fff;
+  --eq-key-bg: hsl(6, 63%, 50%);
+  --eq-key-shadow: hsl(6, 70%, 34%);
+}
+
+.theme-2 {
+  --col-body-bg: hsl(0, 0%, 90%);
+  --col-screen-bg: hsl(0, 0%, 93%);
+  --col-head: hsl(60, 10%, 19%);
+  --col-screen: hsl(60, 10%, 19%);
+  --col-key-bg: hsl(0, 5%, 81%);
+  --key-col: hsl(60, 10%, 19%);
+  --key-bg: hsl(45, 7%, 89%);
+  --key-shadow: hsl(35, 11%, 61%);
+  --sp-key-col: #fff;
+  --sp-key-bg: hsl(185, 42%, 37%);
+  --sp-key-shadow: hsl(185, 58%, 25%);
+  --eq-key-col: #fff;
+  --eq-key-bg: hsl(25, 98%, 40%);
+  --eq-key-shadow: hsl(25, 99%, 27%);
+}
+
+.theme-3 {
+  --col-body-bg: hsl(268, 75%, 9%);
+  --col-screen-bg: hsl(268, 71%, 12%);
+  --col-head: hsl(52, 100%, 62%);
+  --col-screen: hsl(52, 100%, 62%);
+  --col-key-bg: hsl(268, 71%, 12%);
+  --key-col: hsl(52, 100%, 62%);
+  --key-bg: hsl(268, 47%, 21%);
+  --key-shadow: hsl(290, 70%, 36%);
+  --sp-key-col: #fff;
+  --sp-key-bg: hsl(281, 89%, 26%);
+  --sp-key-shadow: hsl(285, 91%, 52%);
+  --eq-key-col: hsl(198, 20%, 13%);
+  --eq-key-bg: hsl(176, 100%, 44%);
+  --eq-key-shadow: hsl(177, 92%, 70%);
+}
+
 body {
   display: block;
-  background-color: hsl(222, 26%, 31%);
+  background-color: var(--col-body-bg);
   font-size: 32px;
 }
 
@@ -25,7 +76,7 @@ body {
 }
 
 .head {
-  color: #fff;
+  color: var(--col-head);
 }
 
 .calculator__screen {
@@ -36,8 +87,8 @@ body {
   border: none;
   border-radius: 10px;
   outline: none;
-  background-color: hsl(224, 36%, 15%);
-  color: #fff;
+  background-color: var(--col-screen-bg);
+  color: var(--col-screen);
 }
 
 .calculator__keys {
@@ -45,7 +96,7 @@ body {
   display: grid;
   border-radius: 10px;
   grid-template-columns: repeat(4, 1fr);
-  background-color: hsl(223, 31%, 20%);
+  background-color: var(--col-key-bg);
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -62,9 +113,9 @@ body {
   justify-content: center;
   text-align: center;
   text-size-adjust: unset;
-  background-color: hsl(30, 25%, 89%);
-  color: hsl(221, 14%, 31%);
-  box-shadow: 0px 5px hsl(224, 28%, 35%);
+  background-color: var(--key-bg);
+  color: var(--key-col);
+  box-shadow: 0px 5px var(--key-shadow);
 }
 
 .key.large {
@@ -75,16 +126,16 @@ body {
 .sp {
   font-size: 20px;
   padding-top: 15px;
-  color: #fff;
-  background-color: hsl(225, 21%, 49%);
-  box-shadow: 0px 5px hsl(224, 28%, 35%);
+  color: var(--sp-key-col);
+  background-color: var(--sp-key-bg);
+  box-shadow: 0px 5px var(--sp-key-shadow);
 }
 
 .equal {
   padding-top: 5px;
-  color: #fff;
-  background-color: hsl(6, 63%, 50%);
-  box-shadow: 0px 5px hsl(6, 70%, 34%);
+  color: var(--eq-key-col);
+  background-color: var(--eq-key-bg);
+  box-shadow: 0px 5px var(--eq-key-shadow);
 }
 
 @media (max-width: 400px) {
