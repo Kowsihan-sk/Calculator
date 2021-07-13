@@ -7,6 +7,8 @@
 
 body {
   display: block;
+  background-color: hsl(222, 26%, 31%);
+  font-size: 32px;
 }
 
 .calc {
@@ -15,11 +17,70 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+
 .calculator {
   position: relative;
   display: grid;
+  width: 30%;
 }
 
+.head {
+  color: #fff;
+}
 .calculator__screen {
-  grid-column: span 4;
+  font-size: 32px;
+  text-align: right;
+  margin: 20px 0px;
+  padding: 40px 20px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background-color: hsl(224, 36%, 15%);
+  color: #fff;
+}
+
+.calculator__keys {
+  padding: 10px;
+  display: grid;
+  border-radius: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: hsl(223, 31%, 20%);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.key {
+  height: 50px;
+  width: 100px;
+  margin: 10px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-size-adjust: unset;
+  background-color: hsl(30, 25%, 89%);
+  color: hsl(221, 14%, 31%);
+  box-shadow: 0px 5px hsl(224, 28%, 35%);
+}
+
+.key.large {
+  grid-column: span 2;
+  width: 220px;
+}
+
+.sp {
+  font-size: 20px;
+  padding-top: 15px;
+  color: #fff;
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0px 5px hsl(224, 28%, 35%);
+}
+
+.equal {
+  color: #fff;
+  background-color: hsl(6, 63%, 50%);
+  box-shadow: 0px 5px hsl(6, 70%, 34%);
 }
