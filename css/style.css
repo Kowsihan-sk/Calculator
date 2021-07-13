@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  display: block;
+}
+
+.calc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.calculator {
+  position: relative;
+  display: grid;
+}
+
+.calculator__screen {
+  grid-column: span 4;
+}
