@@ -36,7 +36,8 @@
       <span class="num" onclick="document.calc.txt.value +='7'">7</span>
       <span class="num" onclick="document.calc.txt.value +='8'">8</span>
       <span class="num" onclick="document.calc.txt.value +='9'">9</span>
-      <span class="num" onclick="document.calc.txt.value +=''">DEL</span>
+      <span class="num"
+        onclick="let value = document.calc.txt.value; document.calc.txt.value = value.substr(0, value.length - 1)">DEL</span>
       <span class="num" onclick="document.calc.txt.value +='4'">4</span>
       <span class="num" onclick="document.calc.txt.value +='5'">5</span>
       <span class="num" onclick="document.calc.txt.value +='6'">6</span>
